@@ -1,0 +1,31 @@
+{
+  "doctype": "DocType",
+  "name": "GLS Settings",
+  "module": "Bright Steps GLS",
+  "issingle": 1,
+  "track_changes": 1,
+  "field_order": ["enabled", "environment", "production_approved", "sandbox_credentials", "sandbox_client_id", "sandbox_client_secret", "sandbox_contact_id", "production_credentials", "production_client_id", "production_client_secret", "production_contact_id", "group_same_address", "test_email", "endpoints", "sandbox_auth_url", "sandbox_api_url", "production_auth_url", "production_api_url"],
+  "fields": [
+    {"fieldname":"enabled","label":"Aktiviert","fieldtype":"Check","default":"0"},
+    {"fieldname":"environment","label":"Umgebung","fieldtype":"Select","options":"Sandbox\nProduction","default":"Sandbox","reqd":1},
+    {"fieldname":"production_approved","label":"Produktivbetrieb nach GLS-Freigabe ausdrücklich genehmigt","fieldtype":"Check","default":"0","depends_on":"eval:doc.environment=='Production'"},
+    {"fieldname":"sandbox_credentials","label":"Sandbox-Zugangsdaten","fieldtype":"Section Break"},
+    {"fieldname":"sandbox_client_id","label":"Sandbox Client ID","fieldtype":"Data"},
+    {"fieldname":"sandbox_client_secret","label":"Sandbox Client Secret","fieldtype":"Password"},
+    {"fieldname":"sandbox_contact_id","label":"Sandbox GLS Kundennummer","fieldtype":"Data"},
+    {"fieldname":"production_credentials","label":"Produktiv-Zugangsdaten","fieldtype":"Section Break","collapsible":1},
+    {"fieldname":"production_client_id","label":"Production Client ID","fieldtype":"Data"},
+    {"fieldname":"production_client_secret","label":"Production Client Secret","fieldtype":"Password"},
+    {"fieldname":"production_contact_id","label":"Production GLS Kundennummer","fieldtype":"Data"},
+    {"fieldname":"group_same_address","label":"Lieferscheine gleicher Adresse und desselben Tages zusammenfassen","fieldtype":"Check","default":"1"},
+    {"fieldname":"test_email","label":"Interne Test-E-Mail","fieldtype":"Data","options":"Email"},
+    {"fieldname":"endpoints","label":"Schnittstellen","fieldtype":"Section Break","collapsible":1},
+    {"fieldname":"sandbox_auth_url","label":"Sandbox OAuth URL","fieldtype":"Data","read_only":1},
+    {"fieldname":"sandbox_api_url","label":"Sandbox API URL","fieldtype":"Data","read_only":1},
+    {"fieldname":"production_auth_url","label":"Production OAuth URL","fieldtype":"Data","read_only":1},
+    {"fieldname":"production_api_url","label":"Production API URL","fieldtype":"Data","read_only":1}
+  ],
+  "permissions": [
+    {"role":"System Manager","read":1,"write":1,"create":1,"delete":1}
+  ]
+}

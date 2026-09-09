@@ -1,0 +1,18 @@
+{
+  "doctype":"DocType","name":"Shipping Run Settings","module":"Bright Steps GLS","issingle":1,
+  "field_order":["enabled","automatic_run","minimum_net_value","kindergarten_wait_days","end_customer_group","kindergarten_group","holiday_list","warning_days","critical_days","submit_pick_lists","submit_delivery_notes"],
+  "fields":[
+    {"fieldname":"enabled","label":"Versandlauf aktiviert","fieldtype":"Check","default":"0"},
+    {"fieldname":"automatic_run","label":"Täglich um 07:00 automatisch ausführen","fieldtype":"Check","default":"0"},
+    {"fieldname":"minimum_net_value","label":"Mindest-Netto-Warenwert","fieldtype":"Currency","default":"150","reqd":1},
+    {"fieldname":"kindergarten_wait_days","label":"Kindergarten-Wartefrist in Werktagen","fieldtype":"Int","default":"5","reqd":1},
+    {"fieldname":"end_customer_group","label":"Kundengruppe Gesamtlieferung","fieldtype":"Link","options":"Customer Group","default":"Endkunde","reqd":1},
+    {"fieldname":"kindergarten_group","label":"Kundengruppe mit Wartefrist","fieldtype":"Link","options":"Customer Group","default":"Kindergarten","reqd":1},
+    {"fieldname":"holiday_list","label":"Feiertagsliste","fieldtype":"Link","options":"Holiday List"},
+    {"fieldname":"warning_days","label":"Warnung ab Werktagen","fieldtype":"Int","default":"5"},
+    {"fieldname":"critical_days","label":"Kritisch ab Werktagen","fieldtype":"Int","default":"8"},
+    {"fieldname":"submit_pick_lists","label":"Picklisten automatisch buchen","fieldtype":"Check","default":"0"},
+    {"fieldname":"submit_delivery_notes","label":"Lieferscheine automatisch buchen","fieldtype":"Check","default":"0"}
+  ],
+  "permissions":[{"role":"Stock Manager","read":1,"write":1,"create":1},{"role":"System Manager","read":1,"write":1,"create":1}]
+}

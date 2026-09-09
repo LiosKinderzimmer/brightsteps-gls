@@ -1,0 +1,4 @@
+{
+  "doctype":"Report","name":"Shipping Backlog Monitor","module":"Bright Steps GLS","ref_doctype":"Sales Order","report_type":"Script Report","is_standard":"Yes",
+  "roles":[{"role":"Stock User"},{"role":"Stock Manager"},{"role":"Sales User"},{"role":"Sales Manager"},{"role":"System Manager"}]
+}

@@ -1,0 +1,18 @@
+{
+  "doctype":"DocType",
+  "name":"GLS Parcel",
+  "module":"Bright Steps GLS",
+  "istable":1,
+  "field_order":["weight","track_id","parcel_number","status","active","label","source_delivery_note","cancel_result"],
+  "fields":[
+    {"fieldname":"weight","label":"Gewicht (kg)","fieldtype":"Float","precision":"3","reqd":1,"in_list_view":1},
+    {"fieldname":"track_id","label":"Track ID","fieldtype":"Data","read_only":1,"in_list_view":1},
+    {"fieldname":"parcel_number","label":"Paketnummer","fieldtype":"Data","read_only":1,"in_list_view":1},
+    {"fieldname":"status","label":"Status","fieldtype":"Select","options":"Draft\nLabel Created\nData Received\nPicked Up\nIn Transit\nOut For Delivery\nDelivered\nCancellation Pending\nCancelled\nNeeds Review","default":"Draft","read_only":1,"in_list_view":1},
+    {"fieldname":"active","label":"Aktiv","fieldtype":"Check","default":"1","read_only":1},
+    {"fieldname":"label","label":"Paketschein","fieldtype":"Attach","read_only":1},
+    {"fieldname":"source_delivery_note","label":"Ursprungs-Lieferschein","fieldtype":"Link","options":"Delivery Note","read_only":1},
+    {"fieldname":"cancel_result","label":"Stornoantwort","fieldtype":"Data","read_only":1}
+  ]
+}
+

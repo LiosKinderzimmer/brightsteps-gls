@@ -1,0 +1,17 @@
+{
+  "doctype":"DocType","name":"Shipping Run Entry","module":"Bright Steps GLS","istable":1,
+  "field_order":["sales_order","customer","customer_group","shipping_address","age_workdays","available_net","release","reason","pick_list","delivery_note","allocation_json"],
+  "fields":[
+    {"fieldname":"sales_order","label":"Auftrag","fieldtype":"Link","options":"Sales Order","in_list_view":1},
+    {"fieldname":"customer","label":"Kunde","fieldtype":"Link","options":"Customer","in_list_view":1},
+    {"fieldname":"customer_group","label":"Kundengruppe","fieldtype":"Link","options":"Customer Group"},
+    {"fieldname":"shipping_address","label":"Lieferadresse","fieldtype":"Link","options":"Address"},
+    {"fieldname":"age_workdays","label":"Alter (Werktage)","fieldtype":"Int","in_list_view":1},
+    {"fieldname":"available_net","label":"Verfügbarer Nettowert","fieldtype":"Currency","in_list_view":1},
+    {"fieldname":"release","label":"Freigegeben","fieldtype":"Check","in_list_view":1},
+    {"fieldname":"reason","label":"Entscheidung","fieldtype":"Small Text","in_list_view":1},
+    {"fieldname":"pick_list","label":"Pickliste","fieldtype":"Link","options":"Pick List"},
+    {"fieldname":"delivery_note","label":"Lieferschein","fieldtype":"Link","options":"Delivery Note"},
+    {"fieldname":"allocation_json","label":"Interne Mengenzuordnung","fieldtype":"Long Text","hidden":1}
+  ]
+}

@@ -1,0 +1,6 @@
+recursive-include brightsteps_gls *.json *.js *.py *.txt
+include README.md
+include INSTALLATION-CHECKLIST.md
+include CHANGELOG.md
+include requirements.txt
+include license.txt

@@ -1,0 +1,13 @@
+{
+  "doctype":"DocType","name":"Shipping Run","module":"Bright Steps GLS","autoname":"VERSAND-.YYYY.-.#####","track_changes":1,
+  "field_order":["status","mode","run_date","started_by","summary","entries"],
+  "fields":[
+    {"fieldname":"status","label":"Status","fieldtype":"Select","options":"Preview\nRunning\nPick Lists Created\nPartially Dispatched\nDispatched\nNeeds Review\nFailed","default":"Preview","reqd":1,"in_list_view":1},
+    {"fieldname":"mode","label":"Ausführung","fieldtype":"Select","options":"Manual\nAutomatic","default":"Manual","reqd":1},
+    {"fieldname":"run_date","label":"Laufdatum","fieldtype":"Date","reqd":1,"in_list_view":1},
+    {"fieldname":"started_by","label":"Gestartet von","fieldtype":"Link","options":"User","read_only":1},
+    {"fieldname":"summary","label":"Zusammenfassung","fieldtype":"Small Text","read_only":1},
+    {"fieldname":"entries","label":"Aufträge und Entscheidungen","fieldtype":"Table","options":"Shipping Run Entry"}
+  ],
+  "permissions":[{"role":"Stock User","read":1},{"role":"Stock Manager","read":1,"write":1,"create":1},{"role":"System Manager","read":1,"write":1,"create":1}]
+}

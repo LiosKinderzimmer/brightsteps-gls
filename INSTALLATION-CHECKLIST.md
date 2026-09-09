@@ -1,0 +1,26 @@
+# Installations- und Abnahmecheckliste
+
+- Datenbank- und Dateisicherung erstellt
+- ERPNext- und Frappe-Hauptversion dokumentiert
+- App auf separatem Testsystem installiert und `bench migrate` ohne Fehler abgeschlossen
+- Direkt nach Installation geprüft: Versandlauf, 07:00-Automatik und automatische Buchungen sind deaktiviert
+- Alte GLS Client/Server Scripts deaktiviert, nicht gelöscht
+- Versandlauf endet nach Erzeugung der eingereichten Picklisten ohne Lieferschein
+- Lager kann bestätigte Pickmengen vor der Versandbestätigung korrigieren
+- Schaltfläche `Versand bestätigen` erzeugt einzelne Lieferscheine und danach die gemeinsame GLS-Sendung
+- Rückstände bleiben am Auftrag offen und erscheinen im Lieferschein-Snapshot
+- Rollen `Stock User`, `Stock Manager` und `System Manager` geprüft
+- Sandbox-Zugang eingetragen; Produktivzugang bleibt deaktiviert
+- Zwei Lieferscheine, gleiche Adresse und gleicher Tag ergeben eine GLS-Sendung
+- Abweichende Adresse oder abweichender Tag ergibt eine neue GLS-Sendung
+- Paketanzahl gilt einmal für die gemeinsame Sendung
+- Je Paket ist ein Gewicht erforderlich
+- Wiederholtes Klicken erstellt keine zweite Sendung
+- Ergänztes Paket verändert vorhandene Track IDs nicht
+- Storno betrifft nur das ausgewählte Paket
+- `SCANNED` verhindert Storno und Ersatzlabel
+- PDF-Format am Zebra ZD421 geprüft
+- Statusprüfung um 12:00 und 18:00 Europe/Vienna geprüft
+- Sandbox-Mail geht nur an die interne Testadresse
+- GLS-Testlabels zur Freigabe eingereicht
+- Produktionsumschaltung separat freigegeben und protokolliert

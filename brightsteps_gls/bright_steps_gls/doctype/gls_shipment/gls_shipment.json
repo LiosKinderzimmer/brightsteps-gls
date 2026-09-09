@@ -1,0 +1,37 @@
+{
+  "doctype":"DocType",
+  "name":"GLS Shipment",
+  "module":"Bright Steps GLS",
+  "autoname":"GLS-SHP-.YYYY.-.#####",
+  "title_field":"name",
+  "search_fields":"customer,shipping_address,status",
+  "track_changes":1,
+  "field_order":["status","environment","company","shipping_date","customer","shipping_address","desired_package_count","delivery_notes_section","delivery_notes","parcels_section","parcels","technical","grouping_key","open_grouping_key","address_snapshot","pending_operation","email_sent_at","notified_track_ids","last_tracking_check","last_error"],
+  "fields":[
+    {"fieldname":"status","label":"Status","fieldtype":"Select","options":"Draft\nReady\nLabel Created\nPartially Handed Over\nShipped\nDelivered\nCancelled\nNeeds Review","default":"Draft","reqd":1,"in_list_view":1},
+    {"fieldname":"environment","label":"Umgebung","fieldtype":"Select","options":"Sandbox\nProduction","reqd":1,"read_only":1,"in_list_view":1},
+    {"fieldname":"company","label":"Firma","fieldtype":"Link","options":"Company","reqd":1,"read_only":1},
+    {"fieldname":"shipping_date","label":"Versandtag","fieldtype":"Date","reqd":1,"in_list_view":1},
+    {"fieldname":"customer","label":"Kunde","fieldtype":"Link","options":"Customer","read_only":1,"in_list_view":1},
+    {"fieldname":"shipping_address","label":"Versandadresse","fieldtype":"Link","options":"Address","reqd":1,"read_only":1},
+    {"fieldname":"desired_package_count","label":"Paketanzahl der gesamten Sendung","fieldtype":"Int","reqd":1,"default":"1","in_list_view":1},
+    {"fieldname":"delivery_notes_section","label":"Zusammengefasste Lieferscheine","fieldtype":"Section Break"},
+    {"fieldname":"delivery_notes","label":"Lieferscheine","fieldtype":"Table","options":"GLS Shipment Delivery Note","reqd":1},
+    {"fieldname":"parcels_section","label":"Pakete","fieldtype":"Section Break"},
+    {"fieldname":"parcels","label":"Pakete","fieldtype":"Table","options":"GLS Parcel"},
+    {"fieldname":"technical","label":"Technisches Protokoll","fieldtype":"Section Break","collapsible":1,"hidden":1},
+    {"fieldname":"grouping_key","label":"Gruppierungsschlüssel","fieldtype":"Data","read_only":1,"hidden":1,"search_index":1},
+    {"fieldname":"open_grouping_key","label":"Offener Gruppierungsschlüssel","fieldtype":"Data","unique":1,"read_only":1,"hidden":1},
+    {"fieldname":"address_snapshot","label":"Adress-Snapshot","fieldtype":"Long Text","read_only":1,"hidden":1},
+    {"fieldname":"pending_operation","label":"Offener Vorgang","fieldtype":"Long Text","read_only":1,"hidden":1},
+    {"fieldname":"email_sent_at","label":"Versandmail gesendet am","fieldtype":"Datetime","read_only":1},
+    {"fieldname":"notified_track_ids","label":"Gemeldete Trackingnummern","fieldtype":"Long Text","read_only":1,"hidden":1},
+    {"fieldname":"last_tracking_check","label":"Letzte GLS-Prüfung","fieldtype":"Datetime","read_only":1},
+    {"fieldname":"last_error","label":"Letzter Fehler","fieldtype":"Small Text","read_only":1}
+  ],
+  "permissions":[
+    {"role":"Stock User","read":1,"write":1,"create":1,"select":1},
+    {"role":"Stock Manager","read":1,"write":1,"create":1,"delete":1,"select":1},
+    {"role":"System Manager","read":1,"write":1,"create":1,"delete":1,"select":1}
+  ]
+}
