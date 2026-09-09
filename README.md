@@ -1,6 +1,8 @@
-# Bright Steps GLS
+# Bright Steps Versand & GLS
 
-> **Entwicklungsstand 0.3.1:** ausschließlich zur Installation auf `test.erp.brightsteps.at` und für GLS-Sandbox-Tests. Keine Produktivfreigabe.
+> **Entwicklungsstand 0.3.1:** vollständiger Teststand für Versandlauf, Picklisten, Lieferscheine, Rückstände und GLS-Sandbox. Ausschließlich zur Installation auf `test.erp.brightsteps.at`. Keine Produktivfreigabe.
+
+Installierbare ERPNext-App für die Versandabwicklung von Bright Steps. Sie steuert die Auswahl lieferbarer Aufträge, die Bildung gemeinsamer Picklisten, die Lagerbestätigung, die Erstellung einzelner Lieferscheine und die anschließende GLS-Abwicklung einschließlich Paketscheinen, Tracking und Versandmails.
 
 ## Versandablauf
 
@@ -8,11 +10,11 @@ Der manuelle oder tägliche Versandlauf erzeugt zunächst ausschließlich nach L
 
 Nach der Kommissionierung bestätigt das Lager im Versandlauf die jeweilige Pickliste und gibt Paketanzahl sowie Gewichte ein. Erst dieser Schritt erzeugt und bucht je Auftrag einen eigenen Lieferschein, speichert den Rückstands-Snapshot und erstellt anschließend eine gemeinsame GLS-Sendung für dieselbe Lieferadresse. Bereits verarbeitete Picklisten werden nicht erneut angeboten.
 
-Installierbare ERPNext-App für GLS ShipIT. Sie ersetzt die während der Erprobung direkt in ERPNext angelegten Client- und Serverskripte.
+Die App ersetzt die während der Erprobung direkt in ERPNext angelegten Client- und Serverskripte durch eine installierbare und updatefähige Custom App.
 
 ## Versandlauf (ab Version 0.2)
 
-Die App enthält zusätzlich einen regelgesteuerten Versandlauf für ERPNext 16:
+Die App enthält einen regelgesteuerten Versandlauf für ERPNext 16:
 
 - gemeinsame Pickliste je normalisierter Lieferadresse; gleiche Artikel werden im Ausdruck summiert,
 - weiterhin ein eigener Lieferschein pro Auftrag,
