@@ -45,7 +45,7 @@ Eine Sendung wird nicht mehr für neue Lieferscheine verwendet, sobald GLS-Label
 
 ```bash
 cd /path/to/frappe-bench
-bench get-app /path/or/git/url/brightsteps_gls
+bench get-app https://github.com/LiosKinderzimmer/brightsteps_gls.git
 bench --site test.erp.brightsteps.at install-app brightsteps_gls
 bench --site test.erp.brightsteps.at migrate
 bench build --app brightsteps_gls
