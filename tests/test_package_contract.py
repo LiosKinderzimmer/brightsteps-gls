@@ -70,6 +70,11 @@ class PackageContractTests(unittest.TestCase):
         self.assertIn(f'__version__ = "{expected}"', (ROOT / "brightsteps_gls" / "__init__.py").read_text())
         self.assertIn(f'app_version = "{expected}"', (ROOT / "brightsteps_gls" / "hooks.py").read_text())
 
+    def test_bench_uses_importable_app_name(self):
+        project_file = (ROOT / "pyproject.toml").read_text()
+        self.assertIn('name = "brightsteps_gls"', project_file)
+        self.assertTrue((ROOT / "brightsteps_gls" / "hooks.py").is_file())
+
 
 if __name__ == "__main__":
     unittest.main()

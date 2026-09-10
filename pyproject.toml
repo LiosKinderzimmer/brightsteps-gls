@@ -1,5 +1,5 @@
 [project]
-name = "brightsteps-gls"
+name = "brightsteps_gls"
 version = "0.3.1"
 description = "Update-safe GLS ShipIT integration for ERPNext"
 requires-python = ">=3.10"
